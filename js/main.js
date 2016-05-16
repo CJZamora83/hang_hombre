@@ -2,25 +2,24 @@ console.log("JS Loaded!");
 
 /*DATA MODEL*/
 var isPlaying       = null;
-var hombreHead      = null;
-var hombreBody      = null;
-var hombreArmRight  = null;
-var hombreArmLeft   = null;
-var hombreLegRight  = null;
-var hombreLegLeft   = null;
+var misses         = 0;
+var guesses        = [];
+var correctIndices = [];
+var word;
 
 
 var words = ["agarrar", "tocar", "quedar",
             "arrancar", "suponer", "proponer",
             "confiar", "dormir", "molear", "estar"];
-var CharCount = null;
 
 /*PLAYING STATUS*/
-function PlayingStatus() {
+function playingStatus() {
   if (isPlaying) {
     isPlaying = false;
   } else {
     isPlaying = true;
+    word = randomWord();
+    underline();
   }
 }
 
@@ -35,7 +34,7 @@ function render() {
 
 /*Select from word array*/
 function randomWord() {
-  return words[Math.floor(Math.random() * 10)];
+  return words[Math.floor(Math.random() * 10)].split('');
 };
 
 /*Render randomWord's character count*/
@@ -44,55 +43,32 @@ function randomWord() {
 /*Render character spaces to View*/
 function underline() {
   var hidden = '';
-  for (i = 0; i <word.length; i++) {
-    hidden += "_";
+  for (i = 0; i < word.length; i++) {
+    if (i < word.length - 1) {
+      hidden += "_ ";
+    } else {
+      hidden += "_"
+    }
   }
   $('#underline-container').text(hidden);
 }
 
-
-/*Crosscheck guesses with random word*/
-console.log("Javascript Loaded");
-
-function checkGuess() {
-  document.getElementByID("checkguess");
-  if (id === letter) {
-      "replace space with letter";
-      } else {
-      return attempts -= 1;
+function checksWord(letter) {
+  if (word.indexOf(letter) !== -1) {
+    for (var i = 0; i < word.length; i++) {
+      // check each letter, if the same, add index to array of correct Indices
+      if (letter === word[i]) {
+        console.log(word[i] + " is present at the index " + i)
       }
+    }
+  } else {
+    console.log("Hang that hombre!");
+  }
 }
+
 
 /*Calling functions*/
 render();
-PlayingStatus();
+playingStatus();
 randomWord();
-underScore();
-
-console.log("JS Loaded!");
-
-// /*DATA MODEL*/
-// var wordBoard = [];
-// var wordsArray = ["agarrar", "tocar", "quedar",
-//                   "arrancar", "suponer", "proponer",
-//                   "confiar", "dormir", "molear",
-//                   "estar"];
-// var underlineArray = [];
-// var word = null;
-// var wordcharCount = null;
-// var $startHanging = $('#startHanging');
-
-// /*Select from word array*/
-// function randomWord() {
-//   word = wordsArray[Math.floor(Math.random() * 10)];
-// }
-
-// /*Set underline to wordBoard*/
-// function underline() {
-//   randomWord();
-//   for(i = 0; i < word.length; i++) {
-//     wordsArray[i] = wordcharCount(i);
-//     wordsArray[i] = "_";
-//   }
-//   .join("");
-// }
+underline();

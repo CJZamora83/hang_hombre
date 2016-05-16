@@ -1,19 +1,39 @@
+@font-face {
+  font-family: "chalkboard melodrama";
+  src: url("Sandbox Melodrama.ttf");
+}
+
 body {
   text-align: center;
   background: url("http://3.bp.blogspot.com/-owhOaTUdCEI/Viap9ZK-jVI/AAAAAAAAW50/DsuHMokFxbU/s1600/chalk-board-wallpaper-36479-images.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: "chalkboard melodrama";
+  color: #FFFFFF;
 }
 
 h1 {
-  color: dodgerblue;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 84px;
+  font-family: 'chalkboard melodrama';
 }
 
 #main-container {
-  border: 2px solid black;
-  margin-left: 10px 10px 10px 10px;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, .5);
+  margin: 0 auto;
   padding: 5px 5px 5px 5px;
-  max-width: 800px;
+  max-width: 90%;
+}
+
+#hombre-container {
+  border: 2px solid yellow;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10x;
+  display: inline-block;
+  font-size: 48px;
+  align-self: left;
 }
 
 #randomword-container {
@@ -27,6 +47,9 @@ h1 {
   border: 1px solid green;
   text-align: center;
   margin: 5px 5px 5px 5px;
-  font-size: 20;
+  font-size: 48px;
   display: inline-block;
+  align-self: right;
 }
+
+a:hover{font-weight: bold; font-size: 52px; font-color: yellow;}

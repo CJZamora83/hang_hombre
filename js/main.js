@@ -39,19 +39,29 @@ function randomWord() {
 };
 
 /*Render randomWord's character count*/
-var currentWord;
-var spaceCount = [null];
+
 
 /*Render character spaces to View*/
-function underScore() {
-  for(i = 0; i < words.length; i+= 1) {
-    spaceCount.push("_");
-    spaceCount.join(" ");
-    spaceCount.toString("");
+function underline() {
+  var hidden = '';
+  for (i = 0; i <word.length; i++) {
+    hidden += "_";
   }
-};
+  $('#underline-container').text(hidden);
+}
 
 
+/*Crosscheck guesses with random word*/
+console.log("Javascript Loaded");
+
+function checkGuess() {
+  document.getElementByID("checkguess");
+  if (id === letter) {
+      "replace space with letter";
+      } else {
+      return attempts -= 1;
+      }
+}
 
 /*Calling functions*/
 render();

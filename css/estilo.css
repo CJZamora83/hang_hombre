@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  background: url("http://3.bp.blogspot.com/-owhOaTUdCEI/Viap9ZK-jVI/AAAAAAAAW50/DsuHMokFxbU/s1600/chalk-board-wallpaper-36479-images.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: dodgerblue;
+}
+
+#main-container {
+  border: 2px solid black;
+  margin-left: 10px 10px 10px 10px;
+  padding: 5px 5px 5px 5px;
+  max-width: 800px;
+}
+
+#randomword-container {
+  border: 2px solid orange;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
+  display: inline-block;
+}
+
+#input-container {
+  border: 1px solid green;
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  font-size: 20;
+  display: inline-block;
+}

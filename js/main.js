@@ -20,11 +20,11 @@ function playingStatus() {
     isPlaying = true;
     word = randomWord();
     underline();
+    checkWord();
   }
 }
 
 /*RENDER - START GAME*/
-
 function render() {
   if (isPlaying) {
     $("PlayButton").text("Start Game");
@@ -53,16 +53,18 @@ function underline() {
   $('#underline-container').text(hidden);
 }
 
-function checksWord(letter) {
+function checkWord(letter) {
   if (word.indexOf(letter) !== -1) {
     for (var i = 0; i < word.length; i++) {
       // check each letter, if the same, add index to array of correct Indices
       if (letter === word[i]) {
-        console.log(word[i] + " is present at the index " + i)
+        console.log(word[i] + " is present at the index " + i);
+        correctIndices.push[i];
+      } else {
+          return misses++;
+          console.log("¡Estas matando el hombre!");
       }
     }
-  } else {
-    console.log("Hang that hombre!");
   }
 }
 

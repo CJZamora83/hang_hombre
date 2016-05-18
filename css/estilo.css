@@ -1,61 +1,128 @@
-@font-face {
-  font-family: "chalkboard melodrama";
-  src: url("Sandbox Melodrama.ttf");
-}
-
 body {
+  font-family: 'Electrolize', sans-serif;
   text-align: center;
-  background: url("http://3.bp.blogspot.com/-owhOaTUdCEI/Viap9ZK-jVI/AAAAAAAAW50/DsuHMokFxbU/s1600/chalk-board-wallpaper-36479-images.jpg");
+  background: url("http://www.infiltrados.org/wp-content/uploads/2015/02/The-Imitation-Game-Slider.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "chalkboard melodrama";
+  font-family: 'Electrolize', sans-serif;
   color: #FFFFFF;
 }
 
 h1 {
-  color: dodgerblue;
-  font-weight: bold;
-  font-size: 74px;
-  font-family: 'chalkboard melodrama';
+  font-size: 62px;
+}
+
+h4 {
+  font-style: italic;
+}
+
+#title-container {
+  border: 2px solid white;
+  background: rgba(0, 0, 0, .9);
+  margin: 0 auto;
+  padding: 3px 3px 3px 3px;
+  max-width: 90%;
 }
 
 #main-container {
   border: 2px solid white;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .9);
   margin: 0 auto;
   padding: 5px 5px 5px 5px;
   max-width: 90%;
+  max-height: 90%;
 }
 
-#hombre-container {
-  border: 2px solid yellow;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px 10px 10x;
-  display: inline-block;
-  font-size: 48px;
-  align-self: left;
-}
-
-#underline-container {
-  border: 2px solid orange;
+#timer-container {
+  border: 2px solid gray;
   padding: 5px 5px 5px 5px;
   margin: 10px 10px 10px 10px;
   display: inline-block;
+  font-size: 48px;
+}
+
+#underline-container {
+  border: 2px solid gray;
+  padding: 5px 5px 5px 5px;
+  margin: 100px 10px 10px 10px;
+  display: inline-block;
+  font-size: 48px;
 }
 
 #input-container {
-  border: 1px solid green;
+  border: 2px solid gray;
   text-align: center;
-  margin: 5px 5px 5px 5px;
+  max-width: 32%;
+  margin: 10px 10px 10px 10px;
   font-size: 48px;
   display: inline-block;
-  align-self: right;
+  float: left;
 }
 
-a:hover{font-weight: bold; font-size: 52px; font-color: yellow;}
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  font-weight: bold;
+  font-size: 52px;
+  font-color: yellow;
+  line-height: 54px;
+
+}
+
+td {
+  line-height: 54px;
+  min-width: 0.75em;
+}
 
 #botones {
   margin: 10px;
   padding: 3px;
   border: 3px solid orange;
+  align: center;
+  clear: both;
+}
+
+/*round buttons code from http://codeitdown.com/css-round-buttons/ */
+
+.round-button {
+    display:block;
+    width:70px;
+    height:70px;
+    line-height:50px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+    margin: 0 auto;
+}
+
+.round-button:hover {
+    background: rgba(255, 255, 255, .5);
+    color: #000000;
+}
+
+#countdown {
+    display:inline-block;
+    width:220px;
+    height:220px;
+    line-height:140px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color:#ffffff;
+    text-align:center;
+    text-decoration:none;
+    background: rgba(255, 0, 0, .6);
+    box-shadow: 0 0 3px gray;
+    font-size:106px;
+    font-weight:bold;
+    margin: 10px 10px 10px 10px;
+    float: right;
+    padding: 84px 25px 0 25px;
 }

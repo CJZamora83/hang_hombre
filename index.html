@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
-  <title>Hang the Hombre: Practice Your Vocab</title>
+  <title>¡SALVANOS!</title>
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
   <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
 </head>
 <body>
-  <h1>Hang the Hombre</h1>
+  <div id="title-container">
+      <h1>¡DESCIFRA EL CÓDIGO!</h1>
+      <h4>BREAK THE CODE!</h4>
+  </div>
+  <br>
   <main id="main-container">
-    <div id="hombre-container">El hombre debe aparecer aqui, guey.</div>
-    <div id="underline-container">_ _ _ _ _ _ _</div>
-    <div id="input-container">
+      <div id="input-container">
 
       <table>
         <thead>
           <tr>
             <td><a id="a">a</a></td><td><a id="b">b</a></td>
             <td><a id="c">c</a></td><td><a id="d">d</a></td>
-          </tr>
-          <tr>
             <td><a id="e">e</a></td><td><a id="f">f</a></td>
-            <td><a id="g">g</a></td><td><a id="h">h</a></td>
           </tr>
           <tr>
+            <td><a id="g">g</a></td><td><a id="h">h</a></td>
             <td><a id="i">i</a></td><td><a id="j">j</a></td>
             <td><a id="k">k</a></td><td><a id="l">l</a></td>
           </tr>
           <tr>
             <td><a id="m">m</a></td><td><a id="n">n</a></td>
             <td><a id="ñ">ñ</a></td><td><a id="o">o</a></td>
+            <td><a id="p">p</a></td><td><a id="q">q</a></td>
           </tr>
           <tr>
-            <td><a id="p">p</a></td><td><a id="q">q</a></td>
             <td><a id="r">r</a></td><td><a id="s">s</a></td>
-          </tr>
             <td><a id="t">t</a></td><td><a id="u">u</a></td>
             <td><a id="v">v</a></td><td><a id="w">w</a></td>
           </tr>
@@ -47,10 +48,12 @@
       </table>
 
     </div>
-  </main>
+    <div id="underline-container">Click Start!</div>
+    <div id="countdown">10</div>
   <div id="botones">
-      <button id="startHanging">Start Playing</button>
+      <button id="startHanging" class="round-button">Start</button>
   </div>
+    </main>
   <script src="./js/main.js"></script>
 </body>
 </html>

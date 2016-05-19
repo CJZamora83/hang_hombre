@@ -30,7 +30,7 @@ h4 {
   margin: 0 auto;
   padding: 5px 5px 5px 5px;
   max-width: 90%;
-  max-height: 90%;
+  height: 520px;
 }
 
 #timer-container {
@@ -90,8 +90,8 @@ td {
 
 .round-button {
     display:block;
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
     line-height:50px;
     border: 2px solid #ffffff;
     border-radius: 50%;
@@ -152,5 +152,10 @@ td {
     margin: 10px 10px 10px 10px;
     float: right;
     padding: 84px 25px 0 25px;
+}
+
+.clicked-letter {
+  color: gray;
+  border: 1px solid gray;
 }
 

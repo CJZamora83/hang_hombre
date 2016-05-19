@@ -1,14 +1,10 @@
 console.log("JS Loaded!");
 
 /*DATA MODEL*/
-var isPlaying        = null;
-var misses           = 0;
-var correctIndices   = [];
-var input            = "";
+var correctIndices;
 var word;
-var timer;
+var timerId;
 var time;
-var chosenLetters = [];
 //var wins;
 //var losses;
 var words = ["agarrar", "tocar", "quedar", "equis",
@@ -44,7 +40,7 @@ function randomWord() {
 /*Render character spaces to View*/
 function underline() {
   word = randomWord();
-
+  correctIndices = [];
   for (var i = 0; i < word.length; i++) {
     correctIndices[i] = "_";
     var node = $("<div></div>").text("_");
@@ -77,33 +73,24 @@ function checkLetter(input) {
       foundIndex = word.indexOf(input, foundIndex+1);
     } // ... go back to the while condition ...
 
+    winnerCheck();
     // Check to see if this letter finished the word! (Ie, you have
     // pushed into correctIndices all the indices).
     // if (correctIndices.length === word.length) {
     //   console.log("¡NOS SALVASTE!");
     // }
   }
-
-  // Mark that this letter was chosen.
-  chosenLetters.push(input);
-}
-
-/*PLAYING STATUS*/
-function playingStatus() {
-  if (isPlaying) {
-    isPlaying = false;
-  } else {
-    isPlaying = true;
-  }
 }
 
 /*RENDER */
 function timer(time) {
   if (time === 0) {
-    console.log("TIME!");
+    clearTimeout(timerId);
+    $('#startHanging').text("Restart").css('visibility', 'visible');
+    alert("You lose!\nThe word was: " + word.join('') + "!");
   } else {
     console.log(time);
-    setTimeout(function() {
+    timerId = setTimeout(function() {
       time--;
       $('#countdown').text(time);
       timer(time);
@@ -113,9 +100,15 @@ function timer(time) {
 
 /*START GAME*/
 function startGame() {
-  // if (isPlaying) {
-  //   $("PlayButton").text("Start Game");
-  // }
+  $('#startHanging').css('visibility', 'hidden');
+  $('.letter-button').each(function(button) {
+    $(this).removeClass('clicked-letter');
+    $(this).off("click");
+    $(this).on("click", function() {
+      markClickedLetter(this);
+      checkLetter($(this).text());
+    });
+  });
   $('#underline-container').text("");
   underline();
   timer(20);
@@ -123,25 +116,24 @@ function startGame() {
 
 /* Event listener for letter guess input*/
 // $(".letter-button").on("click", checkLetter(this));
-  $('.letter-button').each(function(button) {
-    $(this).on("click", function() {
-      checkLetter($(this).text())
-    })
-  });
+
+function markClickedLetter(letter) {
+  $(letter).off('click');
+  $(letter).addClass('clicked-letter');
+}
+
 
 /* Event listener for click - start game*/
 $('#startHanging').on("click", startGame);
 
 
-
+//have StartHanging button say Reset at end of game.
 
 // //Determine a Win condition
-function winOrLose() {
-  if ('underline-container'.length === word.length) {
-    clearTimeOut();
+function winnerCheck() {
+  if (!correctIndices.includes('_')) {
+    clearTimeout(timerId);
+    $('#startHanging').text("Restart").css('visibility', 'visible');
     alert("Win message");
-  } else {
-    if (correctIndices.length !== word.length && time === 0)
-    alert("Lose message");
   }
 }

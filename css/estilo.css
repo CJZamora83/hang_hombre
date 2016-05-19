@@ -64,20 +64,6 @@ h4 {
   float: left;
 }
 
-/*
-a:hover {
-  font-weight: bold;
-  font-size: 52px;
-  font-color: yellow;
-  line-height: 54px;
-
-}
-*/
-td {
-/* line-height: 60px;
-  min-width: 0.75em;*/
-}
-
 #botones {
   margin: 10px;
   padding: 3px;
@@ -87,7 +73,6 @@ td {
 }
 
 /*round buttons code from http://codeitdown.com/css-round-buttons/ */
-
 .round-button {
     display:block;
     width:90px;
@@ -149,13 +134,12 @@ td {
     box-shadow: 0 0 3px gray;
     font-size:106px;
     font-weight:bold;
-    margin: 10px 10px 10px 10px;
+    margin: 50px 10px 10px 10px;
     float: right;
-    padding: 84px 25px 0 25px;
+    padding: 84px 25px 0 30px;
 }
 
 .clicked-letter {
   color: gray;
   border: 1px solid gray;
 }
-

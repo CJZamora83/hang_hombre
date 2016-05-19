@@ -87,7 +87,7 @@ function timer(time) {
   if (time === 0) {
     clearTimeout(timerId);
     $('#startHanging').text("Restart").css('visibility', 'visible');
-    alert("You lose!\nThe word was: " + word.join('') + "!");
+    alert("BOOM!\n¡Oye! The word was: " + word.join('') + "!");
   } else {
     console.log(time);
     timerId = setTimeout(function() {
@@ -134,6 +134,6 @@ function winnerCheck() {
   if (!correctIndices.includes('_')) {
     clearTimeout(timerId);
     $('#startHanging').text("Restart").css('visibility', 'visible');
-    alert("Win message");
+    alert("¡NOS SALVASTE!");
   }
 }

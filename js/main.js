@@ -139,9 +139,9 @@ $('#startHanging').on("click", startGame);
 function winOrLose() {
   if ('underline-container'.length === word.length) {
     clearTimeOut();
-    console.log("TOTAL WIN, BRAH!");
+    alert("Win message");
   } else {
     if (correctIndices.length !== word.length && time === 0)
-    console.log("FAIL! FAIL! FAIL!");
+    alert("Lose message");
   }
 }

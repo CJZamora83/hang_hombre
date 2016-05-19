@@ -42,27 +42,29 @@ h4 {
 }
 
 #underline-container {
-  border: 2px solid gray;
+  border: none;
   padding: 5px 5px 5px 5px;
   margin: 100px 10px 10px 10px;
   display: inline-block;
   font-size: 48px;
 }
 
+#underline-container div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 #input-container {
-  border: 2px solid gray;
+  border: none;
   text-align: center;
-  max-width: 32%;
+  max-width: 40%;
   margin: 10px 10px 10px 10px;
   font-size: 48px;
   display: inline-block;
   float: left;
 }
 
-a {
-  cursor: pointer;
-}
-
+/*
 a:hover {
   font-weight: bold;
   font-size: 52px;
@@ -70,16 +72,16 @@ a:hover {
   line-height: 54px;
 
 }
-
+*/
 td {
-  line-height: 54px;
-  min-width: 0.75em;
+/* line-height: 60px;
+  min-width: 0.75em;*/
 }
 
 #botones {
   margin: 10px;
   padding: 3px;
-  border: 3px solid orange;
+  border: none;
   align: center;
   clear: both;
 }
@@ -108,6 +110,31 @@ td {
     color: #000000;
 }
 
+.letter-button {
+    display:block;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 3px gray;
+    font-size:22px;
+    font-weight:bold;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 15px 2px 15px 2px;
+}
+
+.letter-button:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000000;
+    cursor: pointer;
+}
+
 #countdown {
     display:inline-block;
     width:220px;
@@ -126,3 +153,4 @@ td {
     float: right;
     padding: 84px 25px 0 25px;
 }
+

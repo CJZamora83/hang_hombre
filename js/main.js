@@ -5,8 +5,6 @@ var correctIndices;
 var word;
 var timerId;
 var time;
-//var wins;
-//var losses;
 var words = ["agarrar", "tocar", "quedar", "equis",
             "arrancar", "suponer", "proponer",
             "confiar", "dormir", "moler", "estar",
@@ -48,7 +46,7 @@ function underline() {
   }
 }
 
-
+/*This function will check the Player's letter guesses*/
 function checkLetter(input) {
   // Get the index of the letter in the word, if it exists.
   // If it does not exist, foundIndex equals -1.
@@ -73,12 +71,8 @@ function checkLetter(input) {
       foundIndex = word.indexOf(input, foundIndex+1);
     } // ... go back to the while condition ...
 
+/*Here we will call the winnerCheck function to start determining a win*/
     winnerCheck();
-    // Check to see if this letter finished the word! (Ie, you have
-    // pushed into correctIndices all the indices).
-    // if (correctIndices.length === word.length) {
-    //   console.log("¡NOS SALVASTE!");
-    // }
   }
 }
 
@@ -114,20 +108,15 @@ function startGame() {
   timer(20);
 }
 
-/* Event listener for letter guess input*/
-// $(".letter-button").on("click", checkLetter(this));
-
+/* Event listener that renders a button as non-clickable after it has
+already been clicked*/
 function markClickedLetter(letter) {
   $(letter).off('click');
   $(letter).addClass('clicked-letter');
 }
 
-
 /* Event listener for click - start game*/
 $('#startHanging').on("click", startGame);
-
-
-//have StartHanging button say Reset at end of game.
 
 // //Determine a Win condition
 function winnerCheck() {

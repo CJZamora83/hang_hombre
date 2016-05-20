@@ -59,3 +59,6 @@ I claim no rights or ownership to the image and have used it solely for educatio
 
 
 ###Future Updates  
+As of now, there are two revisions that I will work on:  
+>1. Increasing the word list count from 100 to 500, gradually
+>2. Apply some animation effects when a Lose condition has been determined

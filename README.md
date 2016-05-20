@@ -10,4 +10,3 @@ However, given that Spanish verbs fall within 3 conjugation patterns and have 3 
 Upon clicking the Start button, a count down of 10 seconds begins on the right of the screen and, ultimately, this should simulate the impending danger of a bomb that will surely explode the Player and his fellow soldiers unless the Codebreaker - player - can decipher the word in time and save everyone from "the bomb".  
 
 
-Ezra is showing me how to `git merge`.

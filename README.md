@@ -10,7 +10,12 @@ Salvanos, however, departs from Hangman in two aspects:
 >1. the human player has to successfully decipher each word against a simulated bomb countdown rather than deciphering before reaching a maximum number of guessing errors   
 2. This game is geared towards those learning Spanish and reinforcing their recall of vocabulary  
 
-The game is geared for the person who wants to challenge themselves to quickly recognize a foreign word and simulate a military intelligence setting where real time interpretation is key and avoiding any type of catastrophic event.  For more insight, I served in the U.S. Air Force as a Russian Cryptologic Linguist and thought that this type of vocabulary game could help a foreign language student in any context, but be particularly fun for the military foreign language student.
+The game is oriented as an educational application that is geared for the person who wants to challenge themselves to quickly recognize a foreign word and simulate a military intelligence setting where real time interpretation is key and avoiding any type of catastrophic event.  For more insight, I served in the U.S. Air Force as a Russian Cryptologic Linguist and thought that this type of vocabulary game could help a foreign language student in any context, but be particularly fun for the military foreign language student.
+
+##TRELLO
+My wireframing notes can be observed on my Trello project page at:
+
+ [Salvanos Project](https://trello.com/b/xaWMPggW/salvanos)
 
 ##Technologies
 The following scripting and programming languages were used in the creation of this game:  
@@ -41,7 +46,7 @@ Upon clicking the Start button, a count down of 20 seconds begins on the right o
  [Click to Play](http://http://cjzamora83.github.io/salvanos//)
 
 ###Design & Credits
-The following individuals assisted me immensely with the development of this game and contributed code and/or revisions to my originating code:
+The following individuals assisted me immensely with the development of this game and contributed code and/or revisions to my initial code:
 >[Ezra Raez](https://github.com/EARnagram)        
 >[Jim Clark](https://github.com/jim-clark)  
 >[Phil Hughes](https://github.com/h4w5)  
@@ -53,3 +58,4 @@ The background image is a snapshot of the main actor on set of the movie _The Im
 I claim no rights or ownership to the image and have used it solely for educational purposes within the context of this game.  All rights belong to The Weinstein Company, which distributed the film.
 
 
+###Future Updates  
